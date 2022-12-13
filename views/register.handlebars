@@ -1,0 +1,109 @@
+<style>
+    .container {
+        display: flex;
+    }
+
+    .container-fluid {
+        margin-top: 5%;
+    }
+
+    body {
+        background-image: url('https://media.istockphoto.com/id/1145768813/vector/people-inside-car-interior-travel-driver-navigation-seat-dating-family-passengers-taxi.jpg?s=612x612&w=0&k=20&c=Dv9y69UH1-jFOPlRRx2lR-3MIv9YMLPY6KFF_NEIXNI=');
+        background-size: cover;
+    }
+
+    table,
+    th,
+    td {
+        border: 0px;
+        padding: 5px;
+        border-collapse: collapse;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    input::placeholder {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .row {
+        padding-top: 50px;
+        padding-left: 450px;
+    }
+</style>
+
+<body style="color:white ; font-family: Arial, Helvetica, sans-serif; background-color: rgb(15, 159, 172);">
+    <center>
+        <h1 style="font-family: showcard gothic;"><a href="home.html" style="text-decoration: none; color:black">CAB
+            </a></h1>
+        <h1 style="font-family: showcard gothic; color:black ;">New user registration</h1>
+
+        <div class="container">
+            <div class="row">
+
+
+
+                <table>
+                    <form method="post">
+
+                        <tr>
+                            <td>
+                                <label for="firstName">First Name</label>
+                            </td>
+
+                            <td>
+                                <input type="text" name="firstName" id="firstName" class="form-control"
+                                    placeholder="kaviya" style="width: 20vw; padding: 5px;">
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <label for="lastName">Last Name</label>
+                            </td>
+                            <td>
+
+                                <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Dias"
+                                    style="width: 20vw; padding: 5px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Email</label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email" class="form-control"
+                                    placeholder="kavi@mail.com" style="width: 20vw; padding: 5px;">
+                            </td>
+
+                        <tr>
+                            <td>
+                                <label for="password">Password</label>
+                            </td>
+                            <td>
+                                <input type="password" name="password" id="password" class="form-control"
+                                    placeholder="pass@1234" style="width: 20vw; padding: 5px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="confirmPassword">Confirm Password</label>
+                            </td>
+                            <td>
+                                <input type="password" name="confirmPassword" id="confirmPassword" class="form-control"
+                                    placeholder="pass@1234" style="width: 20vw; padding: 5px;">
+                            </td>
+                        </tr>
+                </table>
+                <br><br>
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                    {{#if message}}
+                    <p class="text-danger">{{message}}</p>
+                    {{/if}}
+                </div>
+                </form>
+            </div>
+        </div>
+        </div>

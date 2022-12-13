@@ -1,0 +1,128 @@
+<style>
+    .container{
+        margin-left:400px ;
+        margin-top: 90px;
+    }
+      {{!-- body {
+        background-image: url('https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg?auto=compress&cs=tinysrgb&w=600');
+        background-size: cover;
+    } --}}
+    .row{
+        border: 0px;
+        width: 400px;
+        margin-left:60px;
+        padding: 0px;
+        border-collapse: collapse;
+        background-color:yellow;
+        height: 150px;
+    }
+    .box{
+        margin-top: 70px;
+    }
+
+    
+* {box-sizing: border-box;}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+
+
+
+.logout {
+  display:none;
+  
+}
+
+.authenticated .logout {
+  display: block;
+}
+.right{
+    margin-left: 90vw;
+    background-color: #2196F3;
+}
+
+</style>
+
+
+
+
+<div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <div class="right">
+     <a  onClick=location.href="/logout" class="logout">Log out</a>
+     </div>
+  </div>
+<center>
+  <h1 style="font-family: showcard gothic; color:red;">BOOK YOUR RIDE</h1>
+</center>
+<div class="container">
+   
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            
+            <form method="post">
+                <table>
+                <tr>
+                    <td>
+                    <label for="pickup">PICKUP</label></td>
+                    <td>
+                    <input type="text" name="pickup" id="pickup" class="form-Control" value="{{data.dataValues.Pickup}}">
+                </td></tr>
+                <tr><td>
+                    <label for="drop">DROP</label></td>
+                    <td>
+                    <input type="text" name="drop" id="drop" class="form-Control" value="{{data.dataValues.Drop}}">
+                </td></tr>
+                <tr>
+                    <td>
+                    <label for="date">DATE</label></td>
+                    <td>
+                    <input type="date" name="date" id="date" class="form-Control" value="{{data.dataValues.Date}}">
+               </td> </tr>
+                <tr><td>
+                    <label for="time">TIME</label></td>
+                    <td>
+                    <input type="time" name="time" id="time" class="form-Control" value="{{data.dataValues.Time}}">
+                </td></tr>
+                  </table>
+                    
+                <div class="d-grid mt-4">
+                    <center>
+                    <input class="btn btn-primary" type="submit" value="Book">
+                    </center>
+                </div>
+          
+            </form>
+            <div class="box">
+                <img src="https://t4.ftcdn.net/jpg/05/22/65/49/240_F_522654963_9emxRwsrpv1ZDpEiZ455gG1W96XuvRWv.jpg">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+ 
+ 
+ <style>
+     body {
+        background-image: url('https://media.istockphoto.com/id/1220699324/vector/young-female-character-driving-a-car-millennial-lifestyle.jpg?s=612x612&w=0&k=20&c=PQ9WFJ3kSMhUcwklsmj4BIX7SCDqVF8BKo8CVVZa9Js=');
+        background-size: cover;
+    }
+
+.container{
+    padding-left: 33%;
+    padding-top:8%;
+}
+    table,
+    th,
+    td {
+        border: 0px;
+        padding: 5px;
+        border-collapse: collapse;
+        border-radius: 5px;
+        background-color:rgb(49, 187, 205);
+        color:azure
+    }
+    .btn-primary {
+        background-color: black;
+        color:blanchedalmond
+    }
+    .box{
+        margin-left: 12vw;
+        
+    }
+ </style>
+
+ <center>
+    <h1 class="text-center">FOR CAB UPDATE</h1>
+
+ </center>
+ <div class="container">
+ <table>
+     <form method="post">
+
+    <tr>
+        <td>
+            <label for="cab">CAB NO</label>
+        </td>
+
+        <td>
+          <input type="text" name="cab" id="cab" class="form-control" placeholder="TN23456" style="width: 20vw; padding: 5px;" value="{{data.dataValues.Cabno}}">
+        </td>
+    </tr>
+
+
+     <tr>
+        <td>
+            <label for="model">CAB MODEL</label>
+        </td>
+        <td>
+
+         <input type="text" name="model" id="model" class="form-control" placeholder="SUV" style="width: 20vw; padding: 5px;" value="{{data.dataValues.Cabmodel}}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="cap">TOTAL SEATINGS</label>
+        </td>
+        <td>
+            <input type="text" name="cap" id="cap" class="form-control"placeholder="5" style="width: 20vw; padding: 5px;" value="{{data.dataValues.Totalseating}}">
+        </td>
+
+        <tr>
+            </table>
+            <br>
+            <div class="box">
+                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                    {{#if message}}
+                    <p class="text-danger">{{message}}</p>
+                    {{/if}}
+                </div>
+                </form>
+    </div>

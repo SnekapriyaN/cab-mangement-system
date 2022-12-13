@@ -1,0 +1,48 @@
+
+    <div class="container" id="body">
+        <div class="text">
+            <h1 class="text-center">Download Receipt</h1>
+        </div>
+
+        <table class="table table-striped mt-4">
+            {{!-- {{#each data}} --}}
+           
+            <tr>
+                <th>PickUp :</th>
+                <td>{{this.dataValues.pickup}}</td>
+            </tr>
+            <tr>
+                <th>Destination :</th>
+                <td>{{dataValues.drop}}</td>
+            </tr>
+            <tr>
+                <th>Date Of Travelling:</th>
+                <td>{{this.date}}</td>
+            </tr>
+            <tr>
+                <th>Time Of Travelling:</th>
+                <td>{{dataValues.time}}</td>
+            </tr>
+
+          
+            {{!-- {{/each}} --}}
+        </table>
+    </div>
+    <div class="footer">
+        <center><button class="btn btn-primary" id="download-button" name="download"
+                onclick="generatePDF();">Download</button></center>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const button = document.getElementById('download-button');
+        function generatePDF() {
+
+            const element = document.getElementById('body');
+            html2pdf().from(element).save();
+        }
+
+    </script>

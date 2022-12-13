@@ -1,0 +1,122 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+         background-color:aquamarine;
+         
+    }
+
+    .box1 {
+
+       
+        
+        background-color:rgb(33, 229, 213);
+
+
+    }
+
+
+   
+    .box {
+margin-top:15px;
+      margin-left: 450px;
+        background-color:aquamarine;
+        
+    }
+   
+
+* {box-sizing: border-box;}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+
+
+</style>
+
+  <div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    </div>
+
+<div class="container">
+     <div class="box">
+        <center>
+            <h1> CAB DRIVER </h1>
+        <h1> LOGIN </h1>
+        
+        <form method="post">
+            <table>
+
+
+                <tr>
+                    <td>
+                        <label for="email">Email</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="mail@123.com"
+                            style="width: 20vw; padding: 5px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+
+                        <label for="password">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="pass@!23"
+                            style="width: 20vw; padding: 5px;">
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <div class="d-grid mt-4">
+                <button type="submit" class="btn btn-primary">LOGIN</button>
+                {{#if message}}
+                <p class="text-danger">{{message}}</p>
+                {{/if}}
+            </div>
+        </form>
+        </center>
+            <div class="box1">
+                <center>
+    <img src="https://img.freepik.com/free-vector/delivery-taxi-online-car-sharing-with-cartoon-character-smartphone-smart-city-transportation-concept-illustration_1150-39665.jpg?size=626&ext=jpg&ga=GA1.2.372759245.1669525137" loop=infinite  width="500vw"/>
+</center>
+</div>
+
+
+    </div>
+
+    </div>
+</div>

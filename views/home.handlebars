@@ -1,0 +1,153 @@
+ 
+ <style>
+    body{
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.navbar {
+  overflow: hidden;
+  height: 65px;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:blue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.box{
+  position: relative;
+  max-width: 900px; 
+  margin: 0;
+  margin-top: 150px; 
+  margin-left: 380px;
+
+   
+}
+
+.content {
+ 
+  position: absolute;
+  bottom: 0; 
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1; 
+  width: 99vw; 
+  padding: 5px;
+  margin-top: 160px;
+
+}
+.box1{
+    margin-left: 90vw;
+
+}
+.logout{
+  display:none ;
+}
+.topnav a.split {
+  float: right;
+ 
+  color: white;
+}
+</style>
+  <div class="container">
+
+        <div class="menu">
+          <div class="topnav">
+            <div class="navbar">
+            <a class ="active" href="#home">Home</a>
+            <div class="dropdown">
+            <button class="dropbtn">Log In<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+            <a href="/login">User</a>
+            <a href="/log">Driver</a>
+          </div></div>
+      
+          
+<div class="dropdown">
+    <button class="dropbtn">Sign Up<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+    <a href="/register">User</a>
+    <a href="/reg">Driver</a>
+    </div></div> 
+ <a href="aboutus">About Us</a>
+  {{!-- <a href="/adminlogin" class="login">Admin</a> --}}
+ <a href="/adminlogin" class="split">Admin</a>
+     </div>
+</div>
+</div>
+ <center>
+    <h1>CAB MANAGEMENT </h1></center>
+
+ <div class="box">
+ 
+  <img src="https://t3.ftcdn.net/jpg/05/22/64/40/240_F_522644003_nE26Q4i0K07nGhKzcVoBsA1a4qCCRfPr.jpg" alt="Notebook" style="width=100%">
+  </div>
+  <div class="content">
+    <h1>Roads are make for journey not for destination</h1>
+    <p>Life is like riding in a taxi. Whether you are going anywhere or not, the meter keeps ticking........
+
+<br>
+          -- John C. Maxwell</p>
+  
+
+</div>
+</div>

@@ -1,0 +1,55 @@
+<style>
+ .box{
+    margin-left: 15px;
+    margin-top: 5vh;
+    background-color: blue;
+ }
+ .container{
+    margin-left: 15vw;
+    background-color: blueviolet;
+    padding:4%;
+ }
+</style>
+
+
+<div class="container" id="body" style="background-color: white; width:40%;">
+    <div class ="container">
+        <table class="table table-striped mt-4">
+           <center><h1  style="color:black;"> Payment</h1><br><br></center>
+            <tr>
+                <th>PickUp </th>
+                <td>{{this.dataValues.Pickup}}</td>
+            </tr>
+            <tr>
+                <th>Drop</th>
+                 <td>{{this.dataValues.Drop}}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                  <td>{{this.dataValues.Date}}</td>
+            </tr>
+            <tr>
+                <th>Time</th>
+               <td>{{this.dataValues.Time}}</td>
+            </tr>
+            
+      
+        </table>
+    </div>
+</div>
+<div class="box">
+    <center><button class="btn btn-primary" id="download-button">Download </button></center>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const button = document.getElementById('download-button');
+    function generatePDF() {
+        const element = document.getElementById('body');
+        html2pdf().from(element).save();
+    }
+    button.addEventListener('click', generatePDF);
+</script>

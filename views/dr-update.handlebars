@@ -1,0 +1,129 @@
+<style>
+    .container {
+        display: flex;
+    }
+
+    .container-fluid {
+        margin-top: 5%;
+    }
+
+    body {
+        background-image: url('https://www.shutterstock.com/image-vector/car-sharing-online-application-concept-human-1898241121');
+        background-size: cover;
+    }
+
+    table,
+    th,
+    td {
+        border: 0px;
+        padding: 5px;
+        border-collapse: collapse;
+        border-radius: 5px;
+        background-color:coral;
+    }
+
+    input::placeholder {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .row {
+        padding-top: 50px;
+        padding-left: 450px;
+    }
+</style>
+
+<body style="color:white ; font-family: Arial, Helvetica, sans-serif; background-color: black">
+    <center>
+        <h1 style="font-family: showcard gothic;"><a style="text-decoration: none; color:coral">CAB
+            </a></h1>
+        <h1 style="font-family: showcard gothic; color: ;">Cab Driver Update</h1>
+
+        <div class="container">
+            <div class="row">
+
+
+
+                <table>
+                    <form method="post">
+
+                        <tr>
+                            <td>
+                                <label for="firstName">First Name</label>
+                            </td>
+
+                            <td>
+                                <input type="text" name="firstName" id="firstName" class="form-control"
+                                    placeholder="jimmy" style="width: 20vw; padding: 5px;" value="{{data.dataValues.firstName}}">
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <label for="lastName">Last Name</label>
+                            </td>
+                            <td>
+
+                                <input type="text" name="lastName" id="lastName" class="form-control" placeholder="jammy"
+                                    style="width: 20vw; padding: 5px;" value="{{data.dataValues.lastName}}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dob">DOB</label>
+                    
+                            </td>
+                            <td>
+                             <input type="date" name="dob" id="dob" class="form-control"   placeholder="12-12-2012" style="width: 20vw; padding: 5px;" value="{{data.dataValues.dob}}">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="email">Email</label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email" class="form-control"
+                                    placeholder="cab@q12.com" style="width: 20vw; padding: 5px;" value="{{data.dataValues.email}}">
+                            </td>
+
+                        <tr>
+                              </tr>
+                        <tr>
+                            <td>
+                                <label for="license">License No</label>
+                            </td>
+                            <td>
+                                <input type="license" name="license" id="email" class="form-control"
+                                    placeholder="ASD123456" style="width: 20vw; padding: 5px;" value="{{data.dataValues.license}}">
+                            </td>
+
+                        <tr>
+                            <td>
+                                <label for="password">Password</label>
+                            </td>
+                            <td>
+                                <input type="password" name="password" id="password" class="form-control"
+                                    placeholder="pass" style="width: 20vw; padding: 5px;" value="{{data.dataValues.password}}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="confirmPassword">Confirm Password</label>
+                            </td>
+                            <td>
+                                <input type="password" name="confirmPassword" id="confirmPassword" class="form-control"
+                                    placeholder="pass@1234" style="width: 20vw; padding: 5px;" >
+                            </td>
+                        </tr>
+                </table>
+                <br><br>
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    {{#if message}}
+                    <p class="text-danger">{{message}}</p>
+                    {{/if}}
+                </div>
+        </form>
+     </div>
+ </div>

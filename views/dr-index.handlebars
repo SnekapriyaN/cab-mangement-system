@@ -1,0 +1,61 @@
+<style>
+     table,
+    th,
+    td {
+        border: 0px;
+        padding: 10px;
+        border-collapse: collapse;
+        border-radius: 5px;
+        background-color:violet;
+    }
+    .container{
+        padding: 10px;
+        padding-left: 27%;
+    }
+
+       
+    body {
+        background-image: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fGNhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+        background-size: cover;
+    }
+</style>
+   <center>
+        <h1 class="text-center">CAB DRIVER DETAILS</h1>
+        <a href="/driver" class="btn btn-primary">New User </a>
+</center>
+<div class="container">
+    
+    <table class="table table-striped mt-4">
+     
+        
+        <tr>
+            <br><br>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+            <th>Email</th>
+            <th>License</th>
+            <th>Password</th>
+           
+        </tr>
+        
+        {{#each data}}
+        <tr>
+            <td>{{this.dataValues.id}}</td>
+            <td>{{this.dataValues.firstName}}</td>
+            <td>{{this.dataValues.lastName}}</td>
+            <td>{{this.dataValues.dob}}</td>
+            <td>{{this.dataValues.email}}</td>
+            <td>{{this.dataValues.license}}</td>
+            <td>{{this.dataValues.password}}</td>
+          
+            <td>
+                <a href="/dri/{{this.dataValues.id}}">Edit</a> |
+                <a href="/delete/{{this.dataValues.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+  
+</div>
